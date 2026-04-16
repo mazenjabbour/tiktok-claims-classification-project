@@ -6,16 +6,43 @@
 ![Tableau](https://img.shields.io/badge/Tableau-Public-orange)
 ![Portfolio](https://img.shields.io/badge/Portfolio-Project-success)
 
-This repository documents an evolving end-to-end portfolio project from the **Google Advanced Data Analytics Certificate**, centered on a fictional TikTok claims-classification use case.
+## Overview
 
-The project investigates how engagement patterns differ between **claim** and **opinion** videos, with the long-term goal of supporting a machine learning model that helps prioritize moderation.
+This project analyzes TikTok video data to distinguish between **claim-based content** and **opinion-based content**, with the goal of supporting **content moderation and predictive modeling**.
+
+The analysis focuses on understanding **engagement patterns (views, likes, shares, comments)** and how they relate to potentially risky or viral content.
 
 ---
 
-## Repository structure
+## Objectives
+
+* Perform Exploratory Data Analysis (EDA)
+* Identify key differences between claim and opinion videos
+* Detect patterns in user engagement behavior
+* Prepare data for future machine learning classification
+
+---
+
+## Dataset
+
+* ~19,000 TikTok videos
+* Key features:
+
+  * video_view_count
+  * video_like_count
+  * video_comment_count
+  * video_share_count
+  * video_download_count
+  * claim_status
+  * author_ban_status
+  * verified_status
+
+---
+
+## Repository Structure
 
 ```text
-tiktok-claims-classification-project-v2/
+tiktok-claims-classification-project/
 ├── course1/
 │   ├── docs/
 │   ├── notebooks/
@@ -32,63 +59,110 @@ tiktok-claims-classification-project-v2/
 
 ---
 
-## Course 1 deliverables
-Course 1 focused on understanding the dataset, inspecting variables, and preparing the project foundation.
+## Course 1 — Data Understanding
 
-Included:
-- project proposal
-- PACE strategy document
-- data inspection notebook
-- executive summary
+Focused on:
 
----
+* Dataset inspection
+* Project proposal
+* Initial assumptions
+* PACE strategy
 
-## Course 2 deliverables
-Course 2 focused on exploratory data analysis, visualization, outlier assessment, and stakeholder communication.
+Deliverables:
 
-Included:
-- completed EDA notebook
-- Course 2 PACE strategy document
-- executive summary
-- Tableau Public link
+* Project proposal
+* PACE document
+* Data inspection notebook
+* Executive summary
 
 ---
 
-## Key insights so far
-- Claim videos generate the vast majority of total views.
-- Engagement variables are highly right-skewed, reflecting viral content behavior.
-- Non-active authors (banned / under review) have much higher median views than active authors.
-- Verified users are much fewer and appear more likely to post opinions than claims.
+## Course 2 — Exploratory Data Analysis (EDA)
+
+Focused on:
+
+* Data cleaning and validation
+* Distribution analysis
+* Outlier detection
+* Engagement analysis
+* Visualization (Python + Tableau)
+
+Deliverables:
+
+* EDA notebook
+* PACE strategy document
+* Executive summary
+* Tableau dashboard
 
 ---
 
-## Tools used
-- Python
-- pandas
-- NumPy
-- seaborn
-- matplotlib
-- Tableau Public
+## Key Insights
+
+* **Claim videos dominate engagement**, generating ~99% of total views
+* Engagement variables are **highly right-skewed**, reflecting viral content behavior
+* A **small number of videos drive the majority of engagement**
+* **Non-active users (banned / under review)** have significantly higher median views
+* **Verified users tend to post opinions**, while unverified users contribute more claims
 
 ---
 
-## Tableau Public
-Course 2 Tableau visualization:
+## Visualizations
+
+* Scatter plot (views vs likes)
+* Boxplots for engagement variables
+* Distribution histograms
+* Author status comparisons
+* Tableau dashboard
+
+---
+
+## Tableau Dashboard
+
 https://public.tableau.com/views/Tiktokfictionaldata/Sheet1
 
 ---
 
-## Portfolio value
-This project demonstrates:
-- data cleaning and inspection
-- exploratory data analysis
-- outlier reasoning
-- business-focused interpretation
-- Python visualization
-- stakeholder communication
-- Tableau integration
+## Tools Used
+
+* Python (Pandas, NumPy)
+* Seaborn & Matplotlib
+* Tableau Public
 
 ---
 
-## Suggested next step
-Continue the same repository with future course folders (`course3/`, `course4/`, etc.) so recruiters can see the progression of the full project lifecycle.
+## Business Impact
+
+* Helps prioritize **high-risk viral content** for moderation
+* Identifies **engagement-driven signals of claim content**
+* Supports development of **predictive classification models**
+
+---
+
+## Portfolio Value
+
+This project demonstrates:
+
+* Data cleaning & preprocessing
+* Exploratory Data Analysis (EDA)
+* Outlier reasoning
+* Data visualization
+* Business-focused interpretation
+* Communication of insights
+* Tableau integration
+
+---
+
+## Next Steps
+
+* Build classification model (Course 3)
+* Feature engineering
+* Model evaluation
+* Predictive deployment
+
+---
+
+## Author
+
+Mazen Jabbour
+Senior Data Analyst | Data Science Portfolio
+
