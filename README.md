@@ -4,29 +4,38 @@
 ![Pandas](https://img.shields.io/badge/Pandas-EDA-150458)
 ![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4c72b0)
 ![Tableau](https://img.shields.io/badge/Tableau-Public-orange)
+![Statistics](https://img.shields.io/badge/Statistics-Hypothesis%20Testing-red)
 ![Portfolio](https://img.shields.io/badge/Portfolio-Project-success)
+
+---
 
 ## Overview
 
-This project analyzes TikTok video data to distinguish between **claim-based content** and **opinion-based content**, with the goal of supporting **content moderation and predictive modeling**.
+This project analyzes TikTok video data to distinguish between **claim-based content** and **opinion-based content**, with the goal of supporting **content moderation, engagement analysis, and predictive modeling**.
 
-The analysis focuses on understanding **engagement patterns (views, likes, shares, comments)** and how they relate to potentially risky or viral content.
+The project follows a full analytics workflow:
+
+* Data understanding
+* Exploratory Data Analysis (EDA)
+* Statistical testing
+* (Next: Machine Learning modeling)
 
 ---
 
 ## Objectives
 
-* Perform Exploratory Data Analysis (EDA)
-* Identify key differences between claim and opinion videos
-* Detect patterns in user engagement behavior
-* Prepare data for future machine learning classification
+* Understand the structure and quality of the dataset
+* Identify patterns in user engagement
+* Compare claim vs opinion content
+* Evaluate the impact of verification status on video performance
+* Prepare data for predictive modeling
 
 ---
 
 ## Dataset
 
 * ~19,000 TikTok videos
-* Key features:
+* Key variables:
 
   * video_view_count
   * video_like_count
@@ -34,8 +43,8 @@ The analysis focuses on understanding **engagement patterns (views, likes, share
   * video_share_count
   * video_download_count
   * claim_status
-  * author_ban_status
   * verified_status
+  * author_ban_status
 
 ---
 
@@ -44,14 +53,8 @@ The analysis focuses on understanding **engagement patterns (views, likes, share
 ```text
 tiktok-claims-classification-project/
 ├── course1/
-│   ├── docs/
-│   ├── notebooks/
-│   └── reports/
 ├── course2/
-│   ├── docs/
-│   ├── notebooks/
-│   ├── reports/
-│   └── tableau/
+├── course3/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -61,25 +64,25 @@ tiktok-claims-classification-project/
 
 ## Course 1 — Data Understanding
 
-Focused on:
+**Focus:**
 
 * Dataset inspection
 * Project proposal
 * Initial assumptions
 * PACE strategy
 
-Deliverables:
+**Deliverables:**
 
-* Project proposal
-* PACE document
 * Data inspection notebook
+* Project proposal
 * Executive summary
+* PACE document
 
 ---
 
 ## Course 2 — Exploratory Data Analysis (EDA)
 
-Focused on:
+**Focus:**
 
 * Data cleaning and validation
 * Distribution analysis
@@ -87,32 +90,63 @@ Focused on:
 * Engagement analysis
 * Visualization (Python + Tableau)
 
-Deliverables:
+**Key Insights:**
+
+* Claim videos generate ~99% of total views
+* Engagement metrics are highly skewed (viral distribution)
+* A small number of videos drive most engagement
+
+**Deliverables:**
 
 * EDA notebook
+* Tableau dashboard
+* Executive summary
+
+---
+
+## Course 3 — Statistical Analysis & Hypothesis Testing
+
+**Focus:**
+
+* Descriptive statistics
+* Hypothesis testing
+* Statistical inference
+
+**Research Question:**
+
+> Is there a statistically significant difference in video view counts between verified and unverified accounts?
+
+**Method Used:**
+
+* Two-sample t-test (Welch’s t-test)
+* Significance level: α = 0.05
+
+**Hypotheses:**
+
+* H₀: μ_verified = μ_unverified
+* H₁: μ_verified ≠ μ_unverified
+
+**Key Result:**
+
+* p-value ≈ 0.000 (extremely small)
+* Strong evidence to reject the null hypothesis
+
+**Insight:**
+
+* Verification status significantly impacts video view counts
+* Engagement differs between verified and unverified users
+
+**Business Impact:**
+
+* Verification status can be used as a predictive feature
+* Helps prioritize high-impact content for moderation
+* Supports engagement-based classification models
+
+**Deliverables:**
+
+* Hypothesis testing notebook
 * PACE strategy document
 * Executive summary
-* Tableau dashboard
-
----
-
-## Key Insights
-
-* **Claim videos dominate engagement**, generating ~99% of total views
-* Engagement variables are **highly right-skewed**, reflecting viral content behavior
-* A **small number of videos drive the majority of engagement**
-* **Non-active users (banned / under review)** have significantly higher median views
-* **Verified users tend to post opinions**, while unverified users contribute more claims
-
----
-
-## Visualizations
-
-* Scatter plot (views vs likes)
-* Boxplots for engagement variables
-* Distribution histograms
-* Author status comparisons
-* Tableau dashboard
 
 ---
 
@@ -126,15 +160,8 @@ https://public.tableau.com/views/Tiktokfictionaldata/Sheet1
 
 * Python (Pandas, NumPy)
 * Seaborn & Matplotlib
+* SciPy (statistical testing)
 * Tableau Public
-
----
-
-## Business Impact
-
-* Helps prioritize **high-risk viral content** for moderation
-* Identifies **engagement-driven signals of claim content**
-* Supports development of **predictive classification models**
 
 ---
 
@@ -144,20 +171,19 @@ This project demonstrates:
 
 * Data cleaning & preprocessing
 * Exploratory Data Analysis (EDA)
-* Outlier reasoning
+* Statistical reasoning & hypothesis testing
 * Data visualization
 * Business-focused interpretation
 * Communication of insights
-* Tableau integration
 
 ---
 
 ## Next Steps
 
-* Build classification model (Course 3)
+* Build classification model (Course 4)
 * Feature engineering
 * Model evaluation
-* Predictive deployment
+* Predictive analytics deployment
 
 ---
 
@@ -165,4 +191,5 @@ This project demonstrates:
 
 Mazen Jabbour
 Senior Data Analyst | Data Science Portfolio
+
 
