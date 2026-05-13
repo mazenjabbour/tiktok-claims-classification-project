@@ -172,3 +172,10 @@ https://github.com/mazenjabbour
 - Feature importance analysis
 - Deployment-ready workflows
 - Interactive dashboards
+
+- ## Additional Portfolio
+
+In addition to this technical data science project, I also maintain a dashboard and business intelligence portfolio on Maven Showcase.
+
+Maven Showcase Portfolio:  
+https://mavenshowcase.com/profile/e8012350-2051-70f4-2885-003ee8ad3bf1
