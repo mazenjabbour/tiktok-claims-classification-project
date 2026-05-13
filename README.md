@@ -1,195 +1,174 @@
 # TikTok Claims Classification Project
 
-![Python](https://img.shields.io/badge/Python-Data%20Analysis-blue)
-![Pandas](https://img.shields.io/badge/Pandas-EDA-150458)
-![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4c72b0)
-![Tableau](https://img.shields.io/badge/Tableau-Public-orange)
-![Statistics](https://img.shields.io/badge/Statistics-Hypothesis%20Testing-red)
-![Portfolio](https://img.shields.io/badge/Portfolio-Project-success)
+Portfolio project for inspecting, analyzing, visualizing, and modeling TikTok video data for claims classification using Python, Tableau, statistics, and machine learning techniques.
 
 ---
 
-## Overview
+# Project Overview
 
-This project analyzes TikTok video data to distinguish between **claim-based content** and **opinion-based content**, with the goal of supporting **content moderation, engagement analysis, and predictive modeling**.
+This repository documents my practical work throughout the Google Advanced Data Analytics Professional Certificate using a fictional TikTok dataset.
 
-The project follows a full analytics workflow:
+The project progressively covers:
 
-* Data understanding
-* Exploratory Data Analysis (EDA)
-* Statistical testing
-* (Next: Machine Learning modeling)
-
----
-
-## Objectives
-
-* Understand the structure and quality of the dataset
-* Identify patterns in user engagement
-* Compare claim vs opinion content
-* Evaluate the impact of verification status on video performance
-* Prepare data for predictive modeling
+- Data inspection and cleaning
+- Exploratory Data Analysis (EDA)
+- Statistical hypothesis testing
+- Data visualization in Python and Tableau
+- Logistic regression modeling
+- Model evaluation and interpretation
 
 ---
 
-## Dataset
-
-* ~19,000 TikTok videos
-* Key variables:
-
-  * video_view_count
-  * video_like_count
-  * video_comment_count
-  * video_share_count
-  * video_download_count
-  * claim_status
-  * verified_status
-  * author_ban_status
-
----
-
-## Repository Structure
+# Repository Structure
 
 ```text
 tiktok-claims-classification-project/
+│
 ├── course1/
+│   ├── notebooks/
+│   ├── reports/
+│   └── docs/
+│
 ├── course2/
+│   ├── notebooks/
+│   ├── reports/
+│   ├── tableau/
+│   └── docs/
+│
 ├── course3/
-├── README.md
+│   ├── notebooks/
+│   ├── reports/
+│   └── docs/
+│
+├── course4/
+│   ├── notebooks/
+│   ├── reports/
+│   ├── docs/
+│   ├── visuals/
+│   └── models/
+│
 ├── requirements.txt
-└── .gitignore
+└── README.md
 ```
 
 ---
 
-## Course 1 — Data Understanding
+# Course 1 — Data Inspection & Initial Exploration
 
-**Focus:**
+## Focus
+- Data loading and inspection
+- Initial cleaning
+- Understanding variables and structure
+- Basic descriptive statistics
 
-* Dataset inspection
-* Project proposal
-* Initial assumptions
-* PACE strategy
-
-**Deliverables:**
-
-* Data inspection notebook
-* Project proposal
-* Executive summary
-* PACE document
+## Skills Applied
+- pandas
+- NumPy
+- Data cleaning
+- Initial EDA
 
 ---
 
-## Course 2 — Exploratory Data Analysis (EDA)
+# Course 2 — Exploratory Data Analysis & Visualization
 
-**Focus:**
+## Focus
+- Advanced EDA
+- Outlier detection
+- Correlation analysis
+- Python visualizations
+- Tableau dashboards
 
-* Data cleaning and validation
-* Distribution analysis
-* Outlier detection
-* Engagement analysis
-* Visualization (Python + Tableau)
-
-**Key Insights:**
-
-* Claim videos generate ~99% of total views
-* Engagement metrics are highly skewed (viral distribution)
-* A small number of videos drive most engagement
-
-**Deliverables:**
-
-* EDA notebook
-* Tableau dashboard
-* Executive summary
-
----
-
-## Course 3 — Statistical Analysis & Hypothesis Testing
-
-**Focus:**
-
-* Descriptive statistics
-* Hypothesis testing
-* Statistical inference
-
-**Research Question:**
-
-> Is there a statistically significant difference in video view counts between verified and unverified accounts?
-
-**Method Used:**
-
-* Two-sample t-test (Welch’s t-test)
-* Significance level: α = 0.05
-
-**Hypotheses:**
-
-* H₀: μ_verified = μ_unverified
-* H₁: μ_verified ≠ μ_unverified
-
-**Key Result:**
-
-* p-value ≈ 0.000 (extremely small)
-* Strong evidence to reject the null hypothesis
-
-**Insight:**
-
-* Verification status significantly impacts video view counts
-* Engagement differs between verified and unverified users
-
-**Business Impact:**
-
-* Verification status can be used as a predictive feature
-* Helps prioritize high-impact content for moderation
-* Supports engagement-based classification models
-
-**Deliverables:**
-
-* Hypothesis testing notebook
-* PACE strategy document
-* Executive summary
-
----
+## Skills Applied
+- matplotlib
+- seaborn
+- Tableau Public
+- Feature exploration
+- Data storytelling
 
 ## Tableau Dashboard
+View Tableau visualization here:
 
-https://public.tableau.com/views/Tiktokfictionaldata/Sheet1
-
----
-
-## Tools Used
-
-* Python (Pandas, NumPy)
-* Seaborn & Matplotlib
-* SciPy (statistical testing)
-* Tableau Public
+🔗 https://public.tableau.com/views/Tiktokfictionaldata/Sheet1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 ---
 
-## Portfolio Value
+# Course 3 — Hypothesis Testing & Statistical Analysis
 
-This project demonstrates:
+## Focus
+- Descriptive statistics
+- Hypothesis testing
+- Two-sample t-tests
+- Statistical interpretation
+- Executive reporting
 
-* Data cleaning & preprocessing
-* Exploratory Data Analysis (EDA)
-* Statistical reasoning & hypothesis testing
-* Data visualization
-* Business-focused interpretation
-* Communication of insights
-
----
-
-## Next Steps
-
-* Build classification model (Course 4)
-* Feature engineering
-* Model evaluation
-* Predictive analytics deployment
+## Skills Applied
+- scipy.stats
+- Statistical inference
+- p-values
+- Hypothesis formulation
+- Executive summaries
 
 ---
 
-## Author
+# Course 4 — Logistic Regression Modeling
 
-Mazen Jabbour
-Senior Data Analyst | Data Science Portfolio
+## Focus
+- Logistic regression modeling
+- Feature engineering
+- Data preprocessing
+- Categorical encoding
+- Model evaluation
+- Classification metrics
 
+## Skills Applied
+- scikit-learn
+- Logistic Regression
+- Confusion Matrix
+- Classification Report
+- Correlation Heatmaps
+- Train/Test Split
+- Model interpretation
 
+## Key Outcomes
+- Built and evaluated a logistic regression model
+- Explored relationships between TikTok engagement variables
+- Interpreted model coefficients and predictive performance
+- Applied machine learning workflow from preprocessing to evaluation
+
+---
+
+# Technologies Used
+
+- Python
+- Jupyter Notebook
+- pandas
+- NumPy
+- matplotlib
+- seaborn
+- scikit-learn
+- scipy
+- Tableau Public
+- Git & GitHub
+
+---
+
+# Author
+
+## Mazen Jabbour
+Senior Data Analyst | Statistician | Data Science Enthusiast
+
+Founder of OrcaStat
+
+GitHub:
+https://github.com/mazenjabbour
+
+---
+
+# Future Improvements
+
+- Advanced machine learning models
+- Model comparison and tuning
+- Cross-validation
+- Feature importance analysis
+- Deployment-ready workflows
+- Interactive dashboards
