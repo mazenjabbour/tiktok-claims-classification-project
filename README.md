@@ -1,6 +1,6 @@
 # TikTok Claims Classification Project
 
-Portfolio project for inspecting, analyzing, visualizing, and modeling TikTok video data for claims classification using Python, Tableau, statistics, and machine learning techniques.
+An end-to-end data science portfolio project focused on inspecting, analyzing, visualizing, and modeling TikTok video data for claims classification using Python, Tableau, statistics, and machine learning techniques.
 
 ---
 
@@ -8,14 +8,30 @@ Portfolio project for inspecting, analyzing, visualizing, and modeling TikTok vi
 
 This repository documents my practical work throughout the Google Advanced Data Analytics Professional Certificate using a fictional TikTok dataset.
 
-The project progressively covers:
+The project follows a complete analytics and machine learning workflow, progressing from data understanding and exploratory analysis to statistical testing and predictive modeling.
 
-- Data inspection and cleaning
+The project covers:
+
+- Data understanding and preparation
 - Exploratory Data Analysis (EDA)
+- Data visualization and storytelling
 - Statistical hypothesis testing
-- Data visualization in Python and Tableau
-- Logistic regression modeling
+- Logistic regression classification modeling
 - Model evaluation and interpretation
+- Machine learning workflow development
+
+---
+
+# Data Science Workflow
+
+This repository follows a structured end-to-end analytics workflow:
+
+Data Understanding & Preparation  
+→ Exploratory Data Analysis & Visualization  
+→ Statistical Hypothesis Testing  
+→ Machine Learning Classification Modeling  
+→ Advanced Modeling & Feature Engineering  
+→ Capstone Business Case Project
 
 ---
 
@@ -24,28 +40,17 @@ The project progressively covers:
 ```text
 tiktok-claims-classification-project/
 │
-├── course1/
-│   ├── notebooks/
-│   ├── reports/
-│   └── docs/
+├── 01_data_understanding_and_preparation/
 │
-├── course2/
-│   ├── notebooks/
-│   ├── reports/
-│   ├── tableau/
-│   └── docs/
+├── 02_exploratory_data_analysis_and_visual_storytelling/
 │
-├── course3/
-│   ├── notebooks/
-│   ├── reports/
-│   └── docs/
+├── 03_statistical_analysis_and_hypothesis_testing/
 │
-├── course4/
-│   ├── notebooks/
-│   ├── reports/
-│   ├── docs/
-│   ├── visuals/
-│   └── models/
+├── 04_machine_learning_classification_modeling/
+│
+├── 05_advanced_modeling_and_feature_engineering/
+│
+├── 06_end_to_end_data_science_capstone_project/
 │
 ├── requirements.txt
 └── README.md
@@ -53,64 +58,69 @@ tiktok-claims-classification-project/
 
 ---
 
-# Course 1 — Data Inspection & Initial Exploration
+# 01 — Data Understanding & Preparation
 
 ## Focus
 - Data loading and inspection
-- Initial cleaning
-- Understanding variables and structure
+- Initial data cleaning
+- Understanding dataset structure
+- Variable exploration
 - Basic descriptive statistics
 
 ## Skills Applied
 - pandas
 - NumPy
 - Data cleaning
-- Initial EDA
+- Data inspection
+- Initial exploratory analysis
 
 ---
 
-# Course 2 — Exploratory Data Analysis & Visualization
+# 02 — Exploratory Data Analysis & Visual Storytelling
 
 ## Focus
-- Advanced EDA
+- Exploratory data analysis
 - Outlier detection
 - Correlation analysis
-- Python visualizations
+- Data visualization
 - Tableau dashboards
+- Insight generation and storytelling
 
 ## Skills Applied
 - matplotlib
 - seaborn
 - Tableau Public
-- Feature exploration
-- Data storytelling
+- Data visualization
+- Exploratory analysis
+- Visual storytelling
 
 ## Tableau Dashboard
+
 View Tableau visualization here:
 
-🔗 https://public.tableau.com/views/Tiktokfictionaldata/Sheet1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+https://public.tableau.com/views/Tiktokfictionaldata/Sheet1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 ---
 
-# Course 3 — Hypothesis Testing & Statistical Analysis
+# 03 — Statistical Analysis & Hypothesis Testing
 
 ## Focus
 - Descriptive statistics
 - Hypothesis testing
 - Two-sample t-tests
 - Statistical interpretation
-- Executive reporting
+- Executive-level reporting
 
 ## Skills Applied
 - scipy.stats
 - Statistical inference
 - p-values
 - Hypothesis formulation
-- Executive summaries
+- Statistical reporting
 
 ---
 
-# Course 4 — Logistic Regression Modeling
+# 04 — Machine Learning Classification Modeling
 
 ## Focus
 - Logistic regression modeling
@@ -130,10 +140,10 @@ View Tableau visualization here:
 - Model interpretation
 
 ## Key Outcomes
-- Built and evaluated a logistic regression model
+- Built and evaluated a logistic regression classification model
 - Explored relationships between TikTok engagement variables
-- Interpreted model coefficients and predictive performance
-- Applied machine learning workflow from preprocessing to evaluation
+- Interpreted predictive model performance
+- Applied a complete machine learning workflow from preprocessing to evaluation
 
 ---
 
@@ -152,14 +162,24 @@ View Tableau visualization here:
 
 ---
 
+# Additional Portfolio
+
+In addition to this technical data science project, I also maintain a dashboard and business intelligence portfolio on Maven Showcase.
+
+Maven Showcase Portfolio:  
+https://mavenshowcase.com/profile/e8012350-2051-70f4-2885-003ee8ad3bf1
+
+---
+
 # Author
 
 ## Mazen Jabbour
-Senior Data Analyst | Statistician | Data Science Enthusiast
+
+Senior Data Analyst | Statistician | Data Science & Business Intelligence Enthusiast
 
 Founder of OrcaStat
 
-GitHub:
+GitHub:  
 https://github.com/mazenjabbour
 
 ---
@@ -172,10 +192,5 @@ https://github.com/mazenjabbour
 - Feature importance analysis
 - Deployment-ready workflows
 - Interactive dashboards
-
-- ## Additional Portfolio
-
-In addition to this technical data science project, I also maintain a dashboard and business intelligence portfolio on Maven Showcase.
-
-Maven Showcase Portfolio:  
-https://mavenshowcase.com/profile/e8012350-2051-70f4-2885-003ee8ad3bf1
+- Streamlit integration
+- End-to-end production pipeline development
