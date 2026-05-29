@@ -188,6 +188,34 @@ https://public.tableau.com/views/Tiktokfictionaldata/Sheet1?:language=en-US&:sid
 
 ---
 
+# 06 — End-to-End Data Science Capstone Project
+
+## Employee Attrition Prediction & Retention Strategy
+
+### Focus
+- Employee turnover prediction
+- Exploratory Data Analysis
+- Decision Tree modeling
+- Random Forest modeling
+- Model evaluation
+- Business recommendations
+
+### Champion Model
+Random Forest
+
+### Performance
+- Accuracy: 98.6%
+- Precision: 99.1%
+- Recall: 92.2%
+- F1 Score: 95.5%
+
+### Key Insights
+- Employee satisfaction was the strongest predictor of turnover.
+- Workload and tenure were strongly associated with employee departures.
+- Long working hours increased turnover risk.
+- The model can support proactive employee retention initiatives.
+---
+
 # Technologies Used
 
 * Python

@@ -1,0 +1,1 @@
+Random Forest was selected as the champion model and identified employee satisfaction, workload, tenure and working hours as the primary drivers of turnover.
