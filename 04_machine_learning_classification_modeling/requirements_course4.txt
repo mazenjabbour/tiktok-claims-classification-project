@@ -1,6 +1,2 @@
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-jupyter
+# Retained for course-folder compatibility; use the repository's audited environment.
+-r ../requirements-dev.txt
