@@ -40,6 +40,18 @@ Of the 19,084 records with a claim-status label, approximately **50.3% are claim
 - Engagement variables dominate the champion model: video views and likes account for most of its feature importance, followed by comments and shares.
 - Creator verification, ban status, video duration, and transcription-text length contribute comparatively little to the final Random Forest model.
 
+## Key Visual Insights
+
+A recruiter-facing visual summary can be generated locally from values already recorded in the project notebooks. The planned charts highlight the nearly balanced claim-versus-opinion target, the large engagement gap between claims and opinions, the champion model's held-out confusion matrix, the close Random Forest/XGBoost comparison, and the dominance of engagement metrics in feature importance.
+
+Generate all five visuals from the repository root with:
+
+```bash
+python visuals/generate_visuals.py
+```
+
+The generated PNG files are intentionally not embedded or committed yet. See [`visuals/README.md`](visuals/README.md) for the chart inventory, source values, and interpretation notes.
+
 ## Model Comparison
 
 | Model | Modeling role | Key result | Interpretation |
@@ -91,6 +103,7 @@ The results show that engagement behavior provides a strong signal for separatin
 ├── 04_machine_learning_classification_modeling/           # Logistic regression analysis
 ├── 05_advanced_machine_learning_and_random_forest_modeling/ # Random Forest and XGBoost
 ├── 06_end_to_end_data_science_capstone_project/           # Separate employee-attrition capstone
+├── visuals/                                                # Locally generated recruiter-facing charts
 ├── requirements.txt                                       # Python dependencies
 └── README.md                                              # Project case study
 ```
