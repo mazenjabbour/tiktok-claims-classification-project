@@ -103,9 +103,11 @@ The results show that engagement behavior provides a strong signal for separatin
 ├── 04_machine_learning_classification_modeling/           # Logistic regression analysis
 ├── 05_advanced_machine_learning_and_random_forest_modeling/ # Random Forest and XGBoost
 ├── 06_end_to_end_data_science_capstone_project/           # Separate employee-attrition capstone
+├── data/                                                   # Dataset schema and setup instructions (CSVs excluded)
 ├── visuals/                                                # Locally generated recruiter-facing charts
-├── requirements.txt                                       # Python dependencies
-└── README.md                                              # Project case study
+├── requirements.txt                                       # Analysis and modeling runtime dependencies
+├── requirements-dev.txt                                   # Jupyter execution tooling
+└── README.md                                               # Project case study
 ```
 
 Each project folder contains a focused combination of notebooks, planning documents, reports, or supporting visuals.
@@ -119,27 +121,66 @@ Each project folder contains a focused combination of notebooks, planning docume
 - **Model evaluation:** confusion matrices, precision, recall, F1 score, accuracy, and feature importance
 - **Version control:** Git and GitHub
 
+## Quick Start
+
+The repository can generate its recruiter-facing visual summary without downloading data or retraining models:
+
+```bash
+git clone https://github.com/mazenjabbour/tiktok-claims-classification-project.git
+cd tiktok-claims-classification-project
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+python visuals/generate_visuals.py
+```
+
+This command writes five PNG charts to `visuals/` using summary values already recorded in the notebooks; it does not change any reported results.
+
 ## Reproducibility Instructions
 
-1. Clone the repository and enter the project directory:
-   ```bash
-   git clone <repository-url>
-   cd tiktok-claims-classification-project
-   ```
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Obtain the fictional `tiktok_dataset.csv` used in the Google Advanced Data Analytics certificate labs and place it in the working directory expected by each TikTok notebook.
-5. Launch Jupyter and run the TikTok notebooks in numbered order:
-   ```bash
-   jupyter notebook
-   ```
+### Environment
+
+- Use Python **3.10 or 3.11** for the most consistent compatibility across the notebooks and modeling libraries.
+- `requirements.txt` contains every third-party package imported by the tracked notebooks and Python script.
+- Install `requirements-dev.txt` when you also need JupyterLab and notebook-execution tooling:
+
+  ```bash
+  pip install -r requirements-dev.txt
+  ```
+
+### Data setup
+
+1. Obtain the course-provided `tiktok_dataset.csv` and, for the separate Salifort Motors capstone, `HR_capstone_dataset.csv` from an authorized source.
+2. Place both files in the canonical `data/` directory using those exact filenames.
+3. Review [`data/README.md`](data/README.md) for the expected schemas, missing-data notice, licensing note, and the compatibility-copy commands required by the notebooks' existing relative paths.
+
+The datasets are not distributed in this repository. The TikTok notebooks in stages 01, 02, 04, and 05 expect `tiktok_dataset.csv`; the stage 06 notebook expects `HR_capstone_dataset.csv`. The stage 03 notebook currently contains imports only and therefore does not reproduce a statistical test on its own.
+
+### Run the notebooks
+
+After copying the appropriate CSV into each notebook directory as documented in `data/README.md`, launch JupyterLab from the repository root:
+
+```bash
+jupyter lab
+```
+
+Run the notebooks in numbered order within the TikTok workflow. Stage 06 is a separate employee-attrition capstone and can be run independently. Notebook execution may retrain models, so reviewers who only want to inspect the portfolio or reproduce the summary visuals should use the Quick Start command instead.
+
+### Dependency audit
+
+The dependency files cover all audited third-party imports:
+
+| Packages | Used for |
+|---|---|
+| `numpy`, `pandas` | Data manipulation and numerical analysis |
+| `matplotlib`, `seaborn` | Visualization |
+| `scipy` | Statistical hypothesis testing |
+| `statsmodels` | Versioned statistical-modeling environment used by stage 04 |
+| `scikit-learn`, `xgboost` | Preprocessing, model training, tuning, and evaluation |
+| `jupyterlab`, `ipykernel`, `nbconvert` | Development-only notebook inspection and execution |
+
+The audit also found standard-library imports (`pathlib` and `platform`), which do not require installation entries.
 
 ## Author
 

@@ -1,0 +1,6 @@
+-r requirements.txt
+
+# Notebook tooling used to inspect and execute the analyses.
+jupyterlab>=4,<5
+ipykernel>=6,<7
+nbconvert>=7,<8
